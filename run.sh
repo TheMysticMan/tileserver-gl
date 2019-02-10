@@ -27,6 +27,8 @@ fi
 
 export DISPLAY=:${displayNumber}.${screenNumber}
 
+echo "copying tiles from nfs share"
+./copy-tiles.sh
 echo
 cd /data
 node /usr/src/app/ -p 80 "$@" &
